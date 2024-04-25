@@ -307,6 +307,13 @@ void SpeedyStepper::setAccelerationInMillimetersPerSecondPerSecond(
       accelerationInMillimetersPerSecondPerSecond * stepsPerMillimeter;
 }
 
+void SpeedyStepper::setDecelerationInMillimetersPerSecondPerSecond(
+                      float decelerationInMillimetersPerSecondPerSecond)
+{
+    deceleration_InStepsPerSecondPerSecond = 
+      decelerationInMillimetersPerSecondPerSecond * stepsPerMillimeter;
+}
+
 
 
 //
@@ -478,6 +485,13 @@ void SpeedyStepper::setAccelerationInRevolutionsPerSecondPerSecond(
 {
     acceleration_InStepsPerSecondPerSecond = 
        accelerationInRevolutionsPerSecondPerSecond * stepsPerRevolution;
+}
+
+void SpeedyStepper::setDecelerationInRevolutionsPerSecondPerSecond(
+                      float decelerationInRevolutionsPerSecondPerSecond)
+{
+    deceleration_InStepsPerSecondPerSecond = 
+      decelerationInRevolutionsPerSecondPerSecond * stepsPerRevolution;
 }
 
 
@@ -660,6 +674,11 @@ void SpeedyStepper::setAccelerationInStepsPerSecondPerSecond(
     acceleration_InStepsPerSecondPerSecond = accelerationInStepsPerSecondPerSecond;
 }
 
+void SpeedyStepper::setDecelerationInStepsPerSecondPerSecond(
+                      float decelerationInStepsPerSecondPerSecond)
+{
+    deceleration_InStepsPerSecondPerSecond = decelerationInStepsPerSecondPerSecond;
+}
 
 
 //
