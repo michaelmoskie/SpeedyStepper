@@ -882,7 +882,7 @@ void SpeedyStepper::setupMoveInSteps(long absolutePositionToMoveToInSteps)
   // velocity of 0, Steps = Velocity^2 / (2 * Accelleration)
   //
   decelerationDistance_InSteps = (long) round((desiredSpeed_InStepsPerSecond * 
-    desiredSpeed_InStepsPerSecond) / (2.0 * acceleration_InStepsPerSecondPerSecond));
+    desiredSpeed_InStepsPerSecond) / (2.0 * deceleration_InStepsPerSecondPerSecond));
   
   
   //
